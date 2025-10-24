@@ -32,7 +32,7 @@ const CreditReportApp = () => {
       const formData = new FormData();
       formData.append('xmlFile', file);
 
-      const response = await fetch('https://creditsea-assignment-backend-01ui.onrender.com/api/upload', {
+      const response = await fetch('https://creditsea-assignment-abpp.vercel.app/api/upload', {
         method: 'POST',
         body: formData,
       });
