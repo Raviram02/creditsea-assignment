@@ -51,21 +51,5 @@ router.post('/upload', upload.single('xmlFile'), async (req, res) => {
   }
 });
 
-//Get all reports
-router.get('/reports', async (req, res) => {
-  try {
-    const reports = await CreditReport.find().sort({ createdAt: -1 });
-    res.status(200).json({
-      success: true,
-      data: reports,
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: 'Error fetching reports: ' + error.message,
-    });
-  }
-});
-
 
 module.exports = router;
